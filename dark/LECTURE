@@ -1,0 +1,47 @@
+In Spring boot
+beans are objects that managed by IOC container that is application context amage life cycle of beans
+ application context is object that has these beans
+@SpringbootApplication is an alias for 3 annotations
+@Configuration
+
+tell class can be used by SPRING IOC CONTAINER aS the source for creating beans can be used
+
+@EnableAutoConfiguration
+It automatically config the application based on classpath that the dependencies or defaults it mentione.This reduces boilerplate code for common configurations.
+@Componentscan
+it tells to specify the base package(s) to scan for Spring components
+lOok for controller,configurations,rep,services for beans  dependency injections
+not only but  @Component, @Controller, @Service, @Repository etc
+@Component
+tells that class is component which  can be created as objects that is beans
+dependency injjection
+it  means the objects registered in IOCcontatiner specified by  @Configuration injected
+using fields constructors method in other components,repo,services
+
+IOC
+It means instead of creating a object manually the object creted by container
+Beans or created in IOC using xml or annotations
+Autoconfiguration: As you mentioned, Spring Boot automatically configures your application based on the classpath. This reduces boilerplate code for common configurations.
+Spring Profiles: Allows you to configure different environments (e.g., development, test, production) with different bean definitions and properties.
+Spring Actuator: Provides endpoints for monitoring and health checks of your application.
+Spring Data: Simplifies data access with integrations for various databases (e.g., JPA, MongoDB).
+Spring Security: Enables authentication and authorization for your application
+
+Spring AOP (Aspect-Oriented Programming): Allows you to intercept method calls and add cross-cutting concerns like logging or security.
+Spring AOP allows you to define cross-cutting concerns like logging, caching, security, and transaction management separately from your core application logic. This separation offers several benefits:
+
+Improved Maintainability: Code for cross-cutting concerns is centralized and reusable across different parts of your application.
+Reduced Code Duplication: No need to repeat logging, caching, or security checks in every method.
+Modular Design: Concerns are encapsulated, promoting cleaner and more modular code.
+Aspects: You define classes annotated with @Aspect to encapsulate cross-cutting logic. These aspects contain advice (the actual code to execute) and pointcuts (where to apply the advice).
+Advice: This is the code that gets executed at specific points in the application flow. Spring provides different types of advice, such as @Before, @After, @Around, etc., for execution at different points (before, after, around a method call).
+Pointcuts: Annotations like @Pointcut define expressions that match methods or execution points where the advice should be applied. Pointcuts can be based on method signatures, annotations on methods or classes, or other criteria.
+Weaving: At runtime, Spring "weaves" the advice from aspects into your application code. This weaving can be done through bytecode manipulation or class weaving techniques.
+Benefits of Usin
+
+
+Messaging: Spring provides support for message-based communication between applications (e.g., RabbitMQ, Kafka).
+Cloud Integration: Spring Cloud offers libraries for deploying applications on cloud platforms like AWS, Azure.
+
+
+
