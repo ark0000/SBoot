@@ -2,10 +2,17 @@ package com.dark;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 @Service
+@PropertySources({
+        @PropertySource("classpath:a.pr")
+})
+
 public class FirstService {
 
     private Environment enviro;
@@ -15,10 +22,6 @@ public class FirstService {
     @Autowired
     @Qualifier("myFirstClassObject")
     private FirstClass FirstClass;
-@Autowired
-    public void injectDependic(FirstClass myFirstClass){
-       this.myFirstClass=myFirstClass;
-    }
 
     public String sayStory(){
        return "Story is "+myFirstClass + "  "+FirstClass;
@@ -31,5 +34,12 @@ public class FirstService {
     }
     public String getVersion(){
         return "Story is java "+enviro.getProperty("java.version");
+    }
+@Value("${myop.pp}")
+  private   String custProp;
+
+
+    public String getCustProp() {
+        return custProp;
     }
 }
