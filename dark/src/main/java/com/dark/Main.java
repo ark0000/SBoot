@@ -23,9 +23,9 @@ public class Main {
         FirstClass myFirstClassObject=ctx.getBean(FirstClass.class);
         System.out.println(myFirstClassObject.sayhello());
     }
-@Bean
-public FirstClass myFirstClassObject(){
-        return new FirstClass();
-}
+//@Bean
+//public FirstClass myFirstClassObject(){
+//        return new FirstClass();
+//}
 }
 
