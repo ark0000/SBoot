@@ -16,7 +16,7 @@ public class Main {
 //        FirstClass myFirstClassObject=ctx.getBean("myBean",FirstClass.class);
 //        System.out.println(myFirstClassObject);
         FirstService firstService=ctx.getBean(com.dark.FirstService.class);
-        System.out.println(firstService.sayStory());
+        System.out.println(firstService.getVersion());
     }
 //@Bean
 //public FirstClass myFirstClassObject(){
