@@ -6,15 +6,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FirstService {
-
-    private final FirstClass myFirstClass;
-
-
-    public FirstService(@Qualifier("bean2") FirstClass myFirstClass) {
-        this.myFirstClass = myFirstClass;
-    }
+@Autowired
+    private FirstClass myFirstClass;
+    @Autowired
+    @Qualifier("myFirstClassObject")
+    private FirstClass FirstClass;
 
     public String sayStory(){
-       return "Story is "+myFirstClass;
+       return "Story is "+myFirstClass + "  "+FirstClass;
     }
 }
