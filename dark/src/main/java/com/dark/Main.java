@@ -24,8 +24,8 @@ public class Main {
         System.out.println(myFirstClassObject.sayhello());
     }
 //@Bean
-//public FirstClass myFirstClassObject(){
-//        return new FirstClass();
-//}
+public FirstClass myFirstClassObject(){
+        return new FirstClass();
+}
 }
 
