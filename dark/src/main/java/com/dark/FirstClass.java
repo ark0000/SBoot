@@ -1,10 +1,18 @@
 package com.dark;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class FirstClass {
+    private  String myVar;
+
+    public FirstClass(String myVar) {
+        this.myVar = myVar;
+    }
+
     public  String sayhello(){
         return "Hello";
+    }
+
+    @Override
+    public String toString() {
+        return " VAR "+myVar;
     }
 }
